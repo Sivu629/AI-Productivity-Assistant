@@ -120,7 +120,9 @@ export function AppShell({
           </button>
           <div className="min-w-0">
             <h1 className="truncate text-lg font-semibold text-foreground md:text-xl">{title}</h1>
-            <p className="truncate text-xs text-muted-foreground md:text-sm">{description}</p>
+            <p className="subtitle-shadow truncate text-xs text-muted-foreground md:text-sm">
+              {description}
+            </p>
           </div>
         </header>
 

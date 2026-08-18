@@ -174,3 +174,7 @@
 @utility gradient-hero {
   background-image: var(--gradient-hero);
 }
+
+@utility subtitle-shadow {
+  text-shadow: var(--shadow-subtitle);
+}
