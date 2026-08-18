@@ -50,7 +50,6 @@ export function ToolWorkspace({
   const mutation = useMutation({
     mutationFn: async () => generate({ data: { system, prompt: buildPrompt(values) } }),
     onSuccess: (result) => {
-      console.log("AI_RESULT", result);
       setOutput(String(result?.text ?? "").trim());
     },
     onError: (error: Error) => toast.error(error.message || "Generation failed. Please try again."),
