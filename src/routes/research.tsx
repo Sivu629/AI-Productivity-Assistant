@@ -39,10 +39,10 @@ function ResearchPage() {
         buildPrompt={(v) =>
           [
             "Produce a research briefing.",
-            `Topic: ${v.topic}`,
-            v.audience ? `Audience: ${v.audience}` : "",
-            v.angle ? `Focus areas: ${v.angle}` : "",
-            `Depth: ${v.depth}`,
+            `Topic: ${v["topic"]}`,
+            v["audience"] ? `Audience: ${v["audience"]}` : "",
+            v["angle"] ? `Focus areas: ${v["angle"]}` : "",
+            `Depth: ${v["depth"]}`,
             "Sections: EXECUTIVE SUMMARY, KEY FINDINGS, OPPORTUNITIES, RISKS & TRADE-OFFS, RECOMMENDED NEXT STEPS, OPEN QUESTIONS TO VERIFY.",
             "Do not fabricate statistics, citations or sources. Where a number or claim would need a source, mark it as [verify].",
           ]

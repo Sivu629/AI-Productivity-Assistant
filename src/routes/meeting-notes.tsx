@@ -39,13 +39,13 @@ function NotesPage() {
         buildPrompt={(v) =>
           [
             "Summarize the following meeting notes.",
-            v.title ? `Meeting: ${v.title}` : "",
-            v.attendees ? `Attendees: ${v.attendees}` : "",
-            `Depth: ${v.detail}`,
+            v["title"] ? `Meeting: ${v["title"]}` : "",
+            v["attendees"] ? `Attendees: ${v["attendees"]}` : "",
+            `Depth: ${v["detail"]}`,
             "Use these sections: SUMMARY, KEY DECISIONS, ACTION ITEMS (owner — task — due date if stated), RISKS / BLOCKERS, OPEN QUESTIONS.",
             "If information for a section is missing, write 'None captured'. Do not invent owners or dates.",
             "NOTES:",
-            v.notes,
+            v["notes"],
           ]
             .filter(Boolean)
             .join("\n")

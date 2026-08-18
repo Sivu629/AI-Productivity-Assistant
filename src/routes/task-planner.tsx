@@ -40,11 +40,11 @@ function PlannerPage() {
         buildPrompt={(v) =>
           [
             "Create a work plan for the goal below.",
-            `Goal: ${v.goal}`,
-            v.deadline ? `Timeframe: ${v.deadline}` : "",
-            v.capacity ? `Capacity: ${v.capacity}` : "",
-            v.constraints ? `Constraints: ${v.constraints}` : "",
-            `Plan style: ${v.style}`,
+            `Goal: ${v["goal"]}`,
+            v["deadline"] ? `Timeframe: ${v["deadline"]}` : "",
+            v["capacity"] ? `Capacity: ${v["capacity"]}` : "",
+            v["constraints"] ? `Constraints: ${v["constraints"]}` : "",
+            `Plan style: ${v["style"]}`,
             "Output: OBJECTIVE, then the plan grouped by phase or week. For every task give: task, priority (High/Medium/Low), estimated effort, dependency (if any). Finish with MILESTONES and TOP RISKS with a mitigation each.",
           ]
             .filter(Boolean)

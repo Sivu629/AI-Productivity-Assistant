@@ -40,12 +40,12 @@ function EmailPage() {
         buildPrompt={(v) =>
           [
             "Write a workplace email.",
-            `Recipient/audience: ${v.recipient}`,
-            `Tone: ${v.tone}`,
-            `Length: ${v.length}`,
-            v.cta ? `Desired next step: ${v.cta}` : "",
+            `Recipient/audience: ${v["recipient"]}`,
+            `Tone: ${v["tone"]}`,
+            `Length: ${v["length"]}`,
+            v["cta"] ? `Desired next step: ${v["cta"]}` : "",
             "Key points to cover:",
-            v.purpose,
+            v["purpose"],
             "Format: 'Subject: ...' on the first line, then a blank line, then the email body with a greeting and sign-off placeholder [Your name]. Use [brackets] for any detail you do not know instead of inventing it.",
           ]
             .filter(Boolean)
