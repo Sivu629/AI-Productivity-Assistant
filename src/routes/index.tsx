@@ -89,7 +89,7 @@ function Dashboard() {
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {tools.map(({ to, icon: Icon, name, copy }) => (
-          <Link key={to} to={to} className="surface-card group p-5 transition-colors hover:border-primary/40">
+          <Link key={to} to={to} className="surface-card group p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-8px_oklch(0.21_0.07_265/0.28)]">
             <span className="grid size-10 place-items-center rounded-lg bg-accent text-accent-foreground">
               <Icon className="size-5" aria-hidden />
             </span>
